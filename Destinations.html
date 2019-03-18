@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="CSS/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+  <title>Destinations</title>
+
+
+
+</head>
+<body>
+
+
+
+  <div class="strokeme">
+    <h1 id="myHeader">Globetrotters Top Destinations</h1>
+  </div>
+
+
+  <h2>We have collected 20 of the world's top tourist attractions! Use your mouse to move around the map, or use the handy list below to find out more about these tourist treasures...</h2>
+  <div id="keys">
+    <div class="key-item">
+      <img src="http://maps.google.com/mapfiles/kml/paddle/red-stars.png">
+      Landmarks
+    </div>
+    <div class="key-item">
+      <img src="http://maps.google.com/mapfiles/kml/paddle/grn-stars.png">
+      Outdoors
+    </div>
+    <div class="key-item">
+      <img src="http://maps.google.com/mapfiles/kml/paddle/blu-stars.png">
+      Historical
+    </div>
+    <div class="key-item">
+      <img src="http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png">
+      Museums & Galleries
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <h2 id="secondHeader" class="strokeme">Top 20 Picks</h2>
+  <h2>Click on a destination to find out more...</h2>
+  <div class="row">
+    <div class="column">
+       <img src="https://i.pinimg.com/originals/93/50/37/935037b822c76321f7ef3fa98598a05f.jpg" class="portrait" style="width:100%">
+    </div>
+    <div class="column">
+       <ul id="list"></ul>
+    </div>
+    <div class="column">
+       <img src="https://cdn.thecrazytourist.com/wp-content/uploads/2017/09/ccimage-shutterstock_412496293.jpg" class="portrait" style="width:100%">
+    </div>
+
+
+   <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADw3VRyI6V9s2ECXEBB7z3k9Oa6pd_CoY&callback=initMap">
+      </script>
+
+</body>
+</html>
