@@ -69,9 +69,20 @@
 
 }
 .portrait {
-  height: 500px;
-  overflow: hidden;
+  /* min-height: 410px; */
+  height: auto;
+  width: 100%;
+  object-fit: contain;
 
+}
+@media screen and (max-width: 1100px){
+  .portrait {
+    display: none;
+  }
+}
+
+body {
+  min-width: 750px;
 }
 h2 {
   text-align: center;

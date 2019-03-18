@@ -193,6 +193,7 @@ function initMap() {
     // when clicked list items take to destination coords on map
      newListItem.onclick = function () {
        map.setCenter(destination.coords);
+       map.setZoom(8);
      }
   }
   // Add Marker Function
