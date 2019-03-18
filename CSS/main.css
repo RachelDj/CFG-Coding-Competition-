@@ -1,0 +1,101 @@
+#map{
+  height: 800px;
+  width: 100%;
+}
+#list {
+  width: 100%;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 10;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+#list li {
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+#myHeader {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4em;
+  text-align: center;
+  color: #436EEE;
+}
+#secondHeader {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 3em;
+  color: #436EEE;
+}
+#keys {
+  display: flex;
+  align-items: center;
+  font-family: arial;
+  font-size: 16;
+  justify-content: space-around;
+  padding-bottom: 15px;
+
+}
+.popup {
+  max-width: 300px;
+}
+
+.popup>img.popupimage {
+  height: auto;
+  max-width: 300px;
+}
+.strokeme {
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 5px #000;
+}
+.key-item {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.5em;
+}
+
+.key-item img {
+  margin: 0px auto;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 33.33%;
+  padding: 5px;
+
+}
+.portrait {
+  /* min-height: 410px; */
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+
+}
+@media screen and (max-width: 1100px){
+  .portrait {
+    display: none;
+  }
+}
+
+body {
+  min-width: 750px;
+}
+h2 {
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+  padding: 0px 10px;
+
+}
+h3 {
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+
+}
+ul {
+  font-family: arial;
+  font-size: 16;
+}
