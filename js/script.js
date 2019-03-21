@@ -164,6 +164,7 @@ function initMap() {
   ]
 
   var options = {
+    //default center and zoom in map when webpage opened
     zoom:4,
     center: {lat:51.5074,lng:0.1278}
   }
@@ -193,11 +194,13 @@ function initMap() {
     // when clicked list items take to destination coords on map
      newListItem.onclick = function () {
        map.setCenter(destination.coords);
+      // when clicked list item zooms in on destination coords on map
        map.setZoom(8);
      }
   }
   // Add Marker Function
   function addMarker(props){
+  // Add using destination coords and add icon image as marker
     var marker = new google.maps.Marker({
          position:props.coords,
          map:map,
@@ -205,10 +208,11 @@ function initMap() {
      });
     // check content
     var infowindow = new google.maps.InfoWindow({
+      // Layout of info window - title, description, image and link.
       content:"<div class='popup'><h1>" + props.title + "</h1><p>" + props.description + "</p><img class='popupimage' src='"+ props.image + "'><a href='" + props.link + "'target='_blank'>Click here to see more about this destination on TripAdvisor!</a></div>"
     });
 
-
+    // Add listener for when a marker is clicked on
     marker.addListener('click', function(){
       infowindow.open(map, marker);
     });

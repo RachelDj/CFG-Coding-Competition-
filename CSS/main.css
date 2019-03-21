@@ -16,16 +16,17 @@
   margin-bottom: 4px;
 }
 #myHeader {
-  font-family: 'Luckiest Guy', cursive;
+  font-family:
   font-size: 4em;
   text-align: center;
   color: #436EEE;
 }
 #secondHeader {
-  font-family: 'Luckiest Guy', cursive;
+  font-family:
   font-size: 3em;
   color: #436EEE;
 }
+/* // CSS for coloured marker keys  */
 #keys {
   display: flex;
   align-items: center;
@@ -43,12 +44,7 @@
   height: auto;
   max-width: 300px;
 }
-.strokeme {
-  text-shadow:
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 5px #000;
+
 }
 .key-item {
   display: flex;
