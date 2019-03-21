@@ -3,20 +3,20 @@
   <title>GlobeTrotters</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="titlestyles.css">
+    <link rel="stylesheet" href="title-index.js">
 </head>
 
 <body>
   <header>
-    <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">GlobeTrotters</a>
+    <a class="navbar-brand" href="title-index.html">GlobeTrotters</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="title-index.html#"> Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="title-index.html"> Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Explorers World</a>
@@ -29,7 +29,7 @@
            Location
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Top 20 Destinations</a>
+            <a class="dropdown-item" href="Destinations.html">Top 20 Destinations</a>
             <a class="dropdown-item" href="#">Explorers</a>
           </div>
       </ul>
@@ -37,15 +37,45 @@
     </nav>
   </header>
 
-<h1 class="display-1">GlobeTrotters</h1>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="planeflight.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="Sydneyoperahouse.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="victoria-falls.jpg" alt="Third slide">
+      </div>
+    </div>
 
-<search
-  <nav class="navbar navbar-light">
- <form class="form-inline">
-   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
- </form>
-</nav>
+    <div class="overlay"></div>
+    <div class="hero">
+        <hgroup>
+             <h1 class="display-1">GlobeTrotters</h1>
+             <h3>What story do you leave behind</h3>
+        </hgroup>
+        <div>
+          <nav class="navbar navbar-light">
+         <form class="form-inline">
+           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+         </form>
+        </nav>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
  </body>
