@@ -216,7 +216,16 @@ function initMap() {
     // check content
     var infowindow = new google.maps.InfoWindow({
       // Layout of info window - title, description, image and link.
-      content:"<div class='popup'><h1>" + props.title + "</h1><p>" + props.description + "</p><img class='popupimage' src='"+ props.image + "'><a href='" + props.link + "'target='_blank'>Click here to see more about this destination on TripAdvisor!</a></div>"
+      content:"<div class='popup'><h1>" +
+       props.title +
+       "</h1><p>" +
+       props.description +
+      "</p>" +
+       "<a href='" +
+       props.link +
+       "'target='_blank'>Click here to see more about this destination on TripAdvisor!</a>" +
+       "<img class='popupimage' src='"+ props.image +"'></div>"
+
     });
 
     // Add listener for when a marker is clicked on
