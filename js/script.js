@@ -177,11 +177,10 @@ function initMap() {
   // add a marker
     addMarker(destination);
   // and add it to the list
-    addDestinationToList(destination)
   })
 
   // add destination to list
-  function addDestinationToList(destination) {
+  function addDestinationToList(destination, infowindow, marker) {
     // get list from html
      var listElement = document.getElementById("list");
     // create new list item
@@ -195,7 +194,15 @@ function initMap() {
      newListItem.onclick = function () {
        map.setCenter(destination.coords);
       // when clicked list item zooms in on destination coords on map
-       map.setZoom(8);
+       map.setZoom(5);
+       // when list item is clicked the corresponding infowindow is opened after a small delay
+       setTimeout(function() { infowindow.open(map, marker) }, 900);
+
+
+       var element = document.getElementById('map');
+       element.scrollIntoView();
+       element.scrollIntoView({behavior: "smooth"});
+
      }
   }
   // Add Marker Function
@@ -216,6 +223,9 @@ function initMap() {
     marker.addListener('click', function(){
       infowindow.open(map, marker);
     });
+    addDestinationToList(props, infowindow, marker)
+
+
 
   }
 
