@@ -1,25 +1,21 @@
 body{
-text-align: center;
-background-color: rgb(255, 253, 239);
-}
-ul {
-   padding: 10px;
-   font-size: 30px
-   margin: 40px 0px 0px 0px;
-   border: 1px solid navy;
-   border-radius: 2px;
-   background-color: rgb(255,254,249);
-}
-li{
   text-align: center;
+  background-color: rgb(255, 253, 239);
+  font-family: serif;
+  display: inline;
 }
-
 header {
     text-align: center;
-    text-decoration: none;
+    font-style: italic;
     display: inline;
         }
- }
+a{
+    font-style: italic;
+    padding-right: 150px;
+  }
+li{
+    padding-right:150px;
+    }
 h1{
 display: center;
 font-style: italic;
@@ -33,14 +29,7 @@ text-decoration-style: dashed;
 
 p {
   font-style: normal;
-  font-size: 30px;
-}
-
-li{
-display: block;
-text-align: center;
-font-style: normal;
-font-size: 24px;
+  font-size: 20px;
 }
 
 h2{
