@@ -164,6 +164,7 @@ function initMap() {
   ]
 
   var options = {
+    //default center and zoom in map when webpage opened
     zoom:4,
     center: {lat:51.5074,lng:0.1278}
   }
@@ -176,11 +177,10 @@ function initMap() {
   // add a marker
     addMarker(destination);
   // and add it to the list
-    addDestinationToList(destination)
   })
 
   // add destination to list
-  function addDestinationToList(destination) {
+  function addDestinationToList(destination, infowindow, marker) {
     // get list from html
      var listElement = document.getElementById("list");
     // create new list item
@@ -193,11 +193,21 @@ function initMap() {
     // when clicked list items take to destination coords on map
      newListItem.onclick = function () {
        map.setCenter(destination.coords);
-       map.setZoom(8);
+      // when clicked list item zooms in on destination coords on map
+       map.setZoom(5);
+       // when list item is clicked the corresponding infowindow is opened after a small delay
+       setTimeout(function() { infowindow.open(map, marker) }, 900);
+
+
+       var element = document.getElementById('map');
+       element.scrollIntoView();
+       element.scrollIntoView({behavior: "smooth"});
+
      }
   }
   // Add Marker Function
   function addMarker(props){
+  // Add using destination coords and add icon image as marker
     var marker = new google.maps.Marker({
          position:props.coords,
          map:map,
@@ -205,13 +215,26 @@ function initMap() {
      });
     // check content
     var infowindow = new google.maps.InfoWindow({
-      content:"<div class='popup'><h1>" + props.title + "</h1><p>" + props.description + "</p><img class='popupimage' src='"+ props.image + "'><a href='" + props.link + "'target='_blank'>Click here to see more about this destination on TripAdvisor!</a></div>"
+      // Layout of info window - title, description, image and link.
+      content:"<div class='popup'><h1>" +
+       props.title +
+       "</h1><p>" +
+       props.description +
+      "</p>" +
+       "<a href='" +
+       props.link +
+       "'target='_blank'>Click here to see more about this destination on TripAdvisor!</a>" +
+       "<img class='popupimage' src='"+ props.image +"'></div>"
+
     });
 
-
+    // Add listener for when a marker is clicked on
     marker.addListener('click', function(){
       infowindow.open(map, marker);
     });
+    addDestinationToList(props, infowindow, marker)
+
+
 
   }
 
